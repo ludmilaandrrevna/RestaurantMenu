@@ -4,7 +4,7 @@
 - Должен работать pip
 - virtualenv
 - Django
-- Git (можно с GitBash)
+- [Git (можно с GitBash)](https://git-scm.com/download/win)
 
 ## Как работать с pip
 ```bash
@@ -60,7 +60,8 @@ python manage.py runserver
 - push
 - pull
 - fetch
-- checkout 
+- checkout
+- rm
 - (пока хватит с тебя)
 
 ## TODO:
