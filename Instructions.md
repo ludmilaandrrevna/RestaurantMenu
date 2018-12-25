@@ -51,6 +51,21 @@ pip install -r requirements.txt
 python manage.py runserver
 ```
 
+### Генерация файлов для миграции
+```bash
+python manage.py makemigrations
+```
+
+### Миграция базы данных
+```bash
+python manage.py migrate
+```
+
+### Создание суперпользователя
+```bash
+python manage.py createsuperuser
+```
+
 ## Git
 - команды настройки
 - init
