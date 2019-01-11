@@ -54,3 +54,5 @@ class Order(models.Model):
 
 class OrderAdmin(admin.ModelAdmin):
     list_display = ('id', 'price')
+
+

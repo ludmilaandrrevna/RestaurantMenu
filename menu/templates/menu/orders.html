@@ -1,0 +1,21 @@
+{% extends 'menu/base.html' %}
+
+{% block content %}
+<h1>Заказы</h1>
+
+{% for order in orders %}
+	<div>
+		<div>
+			{% for dish in order.dishes.all %}
+				<div>
+					{{ dish.name }}
+				</div>
+			{% endfor %}
+		</div>
+		<div>
+			Цена: {{ order.price }}
+		</div>
+		<hr />
+	</div>
+{% endfor %}
+{% endblock %}

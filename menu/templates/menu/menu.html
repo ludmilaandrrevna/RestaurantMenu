@@ -1,0 +1,17 @@
+{% extends 'menu/base.html' %}
+
+{% block content %}
+<h1>Меню</h1>
+
+{% for dish in dishes %}
+	<div>
+		<div>
+			Название: {{ dish.name }}
+		</div>
+		<div>
+			Цена: {{ dish.price }}
+		</div>
+		<hr />
+	</div>
+{% endfor %}
+{% endblock %}
