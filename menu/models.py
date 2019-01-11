@@ -15,6 +15,10 @@ class Component(models.Model):
         )
 
 
+class ComponentAdmin(admin.ModelAdmin):
+    list_display = ('name', 'weight', 'price')
+
+
 class Dish(models.Model):
     name = models.CharField(max_length=40)
     price = models.IntegerField()
@@ -36,7 +40,7 @@ class DishAdmin(admin.ModelAdmin):
     list_display = ('name', 'price', 'weight')
 
 
-class Menu(models.Model):
+class Order(models.Model):
     dishes = models.ManyToManyField(Dish)
 
     def _calculate_price(self):
@@ -48,5 +52,5 @@ class Menu(models.Model):
     price = property(_calculate_price)
 
 
-class MenuAdmin(admin.ModelAdmin):
+class OrderAdmin(admin.ModelAdmin):
     list_display = ('id', 'price')
