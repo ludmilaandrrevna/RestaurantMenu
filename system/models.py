@@ -23,7 +23,6 @@ class Dish(models.Model):
         verbose_name = _('dish')
         verbose_name_plural = _('dishes')
 
-    @property
     def weight(self):
         if not hasattr(self, 'recipe'):
             return 'N/A'
@@ -31,6 +30,8 @@ class Dish(models.Model):
             component.weight
             for component in self.recipe.components.all()
         ])
+
+    weight.short_description = _('weight')
 
     def __str__(self):
         return self.title
@@ -75,6 +76,7 @@ class Order(models.Model):
         verbose_name = _('order')
         verbose_name_plural = _('orders')
 
-    @property
     def price(self):
         return sum([dish.price for dish in self.dishes.all()])
+
+    price.short_description = _('price')
