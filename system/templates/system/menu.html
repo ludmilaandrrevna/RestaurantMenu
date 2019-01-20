@@ -1,4 +1,4 @@
-{% extends 'menu/base.html' %}
+{% extends 'system/base.html' %}
 
 {% block content %}
 <h1>Меню</h1>
@@ -6,7 +6,7 @@
 {% for dish in dishes %}
 	<div>
 		<div>
-			Название: {{ dish.name }}
+			Название: {{ dish.title }}
 		</div>
 		<div>
 			Цена: {{ dish.price }}

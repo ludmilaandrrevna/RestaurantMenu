@@ -1,4 +1,4 @@
-{% extends 'menu/base.html' %}
+{% extends 'system/base.html' %}
 
 {% block content %}
 <h1>Заказы</h1>
@@ -8,7 +8,7 @@
 		<div>
 			{% for dish in order.dishes.all %}
 				<div>
-					{{ dish.name }}
+					{{ dish.title }}
 				</div>
 			{% endfor %}
 		</div>
