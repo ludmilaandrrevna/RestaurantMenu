@@ -40,6 +40,7 @@ class Recipe(models.Model):
     dish = models.OneToOneField(
         'Dish',
         on_delete=models.CASCADE,
+        verbose_name=_('dish'),
         primary_key=True
     )
     components = models.ManyToManyField(
